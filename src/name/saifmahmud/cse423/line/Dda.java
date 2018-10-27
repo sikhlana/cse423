@@ -2,7 +2,6 @@ package name.saifmahmud.cse423.line;
 
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLAutoDrawable;
-import name.saifmahmud.cse423.AbstractAlgorithm;
 import name.saifmahmud.cse423.Point;
 
 import java.awt.*;
