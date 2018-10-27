@@ -8,6 +8,8 @@ abstract public class AbstractAssignment implements GLEventListener {
     protected static GLCapabilities capabilities = new GLCapabilities(profile);
     protected static GLCanvas canvas = new GLCanvas(capabilities);
 
+    protected AbstractAlgorithm algo;
+
     protected void drawZoneLines(GLAutoDrawable drawable) {
         final GL2 gl = drawable.getGL().getGL2();
         gl.glPointSize(1);

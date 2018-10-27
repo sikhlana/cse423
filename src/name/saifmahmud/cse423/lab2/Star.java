@@ -4,13 +4,12 @@ import com.jogamp.opengl.GLAutoDrawable;
 import name.saifmahmud.cse423.AbstractAssignment;
 import name.saifmahmud.cse423.CircularArrayList;
 import name.saifmahmud.cse423.Point;
-import name.saifmahmud.cse423.line.Dda;
+import name.saifmahmud.cse423.line.AbstractAlgorithm;
+import name.saifmahmud.cse423.line.Midpoint;
 
 import javax.swing.*;
 
 public class Star extends AbstractAssignment {
-    private Dda dda;
-
     public static void main(String[] args) {
         Star star = new Star();
         canvas.addGLEventListener(star);
@@ -22,7 +21,7 @@ public class Star extends AbstractAssignment {
         frame.setSize(canvas.getPreferredSize());
         frame.setVisible(true);
 
-        star.dda = new Dda(canvas.getPreferredSize());
+        star.algo = new Midpoint(canvas.getPreferredSize());
     }
 
     @Override
@@ -45,7 +44,7 @@ public class Star extends AbstractAssignment {
                     continue;
                 }
 
-                dda.draw(drawable, start, end);
+                ((AbstractAlgorithm) algo).draw(drawable, start, end);
             }
         }
     }

@@ -3,13 +3,13 @@ package name.saifmahmud.cse423.lab2;
 import com.jogamp.opengl.GLAutoDrawable;
 import name.saifmahmud.cse423.AbstractAssignment;
 import name.saifmahmud.cse423.Point;
+import name.saifmahmud.cse423.line.AbstractAlgorithm;
 import name.saifmahmud.cse423.line.Dda;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
 public class Triangle extends AbstractAssignment {
-    private Dda dda;
 
     public static void main(String[] args) {
         Triangle triangle = new Triangle();
@@ -22,7 +22,7 @@ public class Triangle extends AbstractAssignment {
         frame.setSize(canvas.getPreferredSize());
         frame.setVisible(true);
 
-        triangle.dda = new Dda(canvas.getPreferredSize());
+        triangle.algo = new Dda(canvas.getPreferredSize());
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Triangle extends AbstractAssignment {
                     continue;
                 }
 
-                dda.draw(drawable, start, end);
+                ((AbstractAlgorithm) algo).draw(drawable, start, end);
             }
         }
     }
