@@ -1,8 +1,8 @@
 package name.saifmahmud.cse423;
 
 public class Point {
-    final public double x;
-    final public double y;
+    public double x;
+    public double y;
 
     public Point(double x, double y) {
         this.x = x;
